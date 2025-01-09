@@ -1,0 +1,45 @@
+@use './styles/fonts' as *;
+
+:root {
+  font-family: Roboto, sans-serif;
+  --white: rgb(255, 255, 255);
+  --gray: rgb(217, 217, 217);
+  --light-gray: rgb(242, 242, 242);
+  --light-blue: rgb(90, 140, 228);
+  --dark-blue-60: rgba(25, 75, 174, 60%);
+  --dark-blue-100: rgb(25, 75, 174);
+  --black-40: rgba(0, 0, 0, 40%);
+  --black-60: rgba(0, 0, 0, 60%);
+  --black-100: rgb(0, 0, 0);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+h1 {
+  font-size: 6.4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.text{
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.subtext {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
