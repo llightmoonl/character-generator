@@ -1,26 +1,17 @@
 <script setup lang="ts">
 import {useAttrs} from "vue";
-import clsx from "clsx";
 
-defineProps<{
+const props = defineProps<{
   active?: boolean,
 }>();
 
-defineOptions({
-  inheritAttrs: false
-});
-
-const attributes = useAttrs();
+const emits = defineEmits<{
+  'click-tab': []
+}>()
 </script>
 
 <template>
-  <button :class = "clsx(
-      'tabs__trigger',
-      attributes.class,
-      {
-        ['tabs__trigger_active']:active
-      })"
-  >
+  <button @click = "emits('click-tab')" class="tabs__trigger" :class="active && 'tabs__trigger_active'">
     <slot>Tab</slot>
   </button>
 </template>
