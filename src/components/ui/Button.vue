@@ -2,31 +2,22 @@
 import clsx from "clsx";
 import {useAttrs} from "vue";
 
-defineProps<{
+const props = defineProps<{
   variant?: string,
 }>();
-
-defineOptions({
-  inheritAttrs: false
-});
-
-const attributes = useAttrs();
 </script>
 
 <template>
-  <button :class = "clsx(
-      'button',
-      attributes.class,
-      {
-        ['button__secondary']:variant === 'secondary'
-      }
-      )">
+  <button
+      class = "button"
+      :class = "props.variant === 'secondary' && 'button__secondary'">
     <slot>Send</slot>
   </button>
 </template>
 
 <style lang="scss" scoped>
   .button{
+    width: 100%;
     font-size: 1.6rem;
     font-weight: 700;
     background-color: var(--dark-blue-100);
@@ -39,7 +30,7 @@ const attributes = useAttrs();
       background-color: #144198;
     }
     &__secondary{
-      background-color: var(--light-gray);
+      background-color: transparent;
       border: 1px solid var(--black-60);
       color: var(--black-60);
       &:hover{

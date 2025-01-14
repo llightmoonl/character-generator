@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import {useAttrs} from "vue";
 
 const props = defineProps<{
   active?: boolean,
@@ -11,13 +10,18 @@ const emits = defineEmits<{
 </script>
 
 <template>
-  <button @click = "emits('click-tab')" class="tabs__trigger" :class="active && 'tabs__trigger_active'">
+  <button
+      @click = "emits('click-tab')"
+      class="tabs__trigger"
+      :class="active && 'tabs__trigger_active'"
+  >
     <slot>Tab</slot>
   </button>
 </template>
 
 <style scoped lang="scss">
   .tabs__trigger{
+    user-select: none;
     padding: 10px 24px;
     background-color: transparent;
     border: 2px solid var(--dark-blue-60);
