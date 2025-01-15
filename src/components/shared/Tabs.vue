@@ -9,7 +9,7 @@ const props = defineProps<{
 const id = ref(1);
 
 const handleTab = (item) => {
-  window.location.pathname = item.type;
+  window.history.pushState(null, "", item.type.toLowerCase());
   id.value = item.id;
 }
 </script>

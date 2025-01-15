@@ -1,29 +1,20 @@
 <script setup lang="ts">
 import RadioGroupItem from "./RadioGroupItem.vue";
+
+const props = defineProps<{
+  items: Array<string>;
+}>()
+console.log(props.items);
 </script>
 
 <template>
 <form class = "radio-group">
   <RadioGroupItem
-      name = "tab"
-      id = "tab"
-      checked><img alt = "hair" src="../../assets/hair/hair-1.svg"/></RadioGroupItem>
-  <RadioGroupItem
-      name = "tab"
-      id = "tab1"><img alt = "hair" src="../../assets/hair/hair-2.svg"/></RadioGroupItem>
-  <RadioGroupItem
-      name = "tab"
-      id = "tab2"><img alt = "hair" src="../../assets/hair/hair-3.svg"/></RadioGroupItem>
-  <RadioGroupItem
-      name = "tab"
-      id = "tab3"
-      ><img alt = "hair" src="../../assets/hair/hair-4.svg"/></RadioGroupItem>
-  <RadioGroupItem
-      name = "tab"
-      id = "tab4"><img alt = "hair" src="../../assets/hair/hair-5.svg"/></RadioGroupItem>
-  <RadioGroupItem
-      name = "tab"
-      id = "tab5"><img alt = "hair" src="../../assets/hair/hair-6.svg"/></RadioGroupItem>
+      v-for = "item in props.items"
+      :name = "item.type"
+      :id = "item.id"
+      checked><img :alt = "item.alt" src="../../assets/hair/hair-1.svg"/>
+  </RadioGroupItem>
 </form>
 </template>
 

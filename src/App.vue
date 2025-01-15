@@ -14,20 +14,22 @@ import {Download, Shuffle} from "lucide-vue-next";
 const tabs = ref([]);
 const elements = ref([]);
 
-const urlTabs = ref('hair');
-
+const url = ref(window.location.pathname.slice(1));
 onMounted(async() => {
   try{
     const tabsResponse = await axios.get('https://60db5d8d801dcb00172910e7.mockapi.io/tabs');
     tabs.value = tabsResponse.data;
 
-    const elementsResponse = await axios.get(`https://60db5d8d801dcb00172910e7.mockapi.io/elements?type=${urlTabs.value}`);
+    const elementsResponse = await axios.get(`https://60db5d8d801dcb00172910e7.mockapi.io/elements?type=${url.value}`);
     elements.value = elementsResponse.data;
+    console.log(elements.value);
   }
   catch(error){
     console.error(`Ошибка с сетью: ${error}`);
   }
 })
+
+
 </script>
 
 <template>
@@ -52,8 +54,14 @@ onMounted(async() => {
         </div>
         <div class="generator__right">
           <h2 class = "generator__subtitle">Customize Look</h2>
-          <Tabs class="generator__tabs" :items="tabs"/>
-          <RadioGroup class="generator__radios"></RadioGroup>
+          <Tabs
+              class="generator__tabs"
+              :items="tabs"
+          />
+          <RadioGroup
+              class="generator__radios"
+              :items="elements"
+          />
         </div>
       </div>
     </Container>
