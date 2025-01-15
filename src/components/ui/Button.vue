@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import clsx from "clsx";
-import {useAttrs} from "vue";
 
 const props = defineProps<{
   variant?: string,
 }>();
+
 </script>
 
 <template>

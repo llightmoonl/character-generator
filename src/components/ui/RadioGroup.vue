@@ -4,7 +4,7 @@ import RadioGroupItem from "./RadioGroupItem.vue";
 const props = defineProps<{
   items: Array<string>;
 }>()
-console.log(props.items);
+
 </script>
 
 <template>
@@ -13,7 +13,7 @@ console.log(props.items);
       v-for = "item in props.items"
       :name = "item.type"
       :id = "item.id"
-      checked><img :alt = "item.alt" src="../../assets/hair/hair-1.svg"/>
+      checked><img :alt = "item.alt" :src="item.url"/>
   </RadioGroupItem>
 </form>
 </template>

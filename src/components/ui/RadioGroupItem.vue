@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const props = defineProps<{
-  id: string,
+  id: number,
   name: string,
   checked?: boolean,
 }>()
@@ -9,10 +9,10 @@ const props = defineProps<{
 <template>
   <div class="radio">
     <input
-           class = "radio__input"
-           :name = "props.name"
-           :id = "props.id" type = "radio"
-           :checked = "checked"
+      class = "radio__input"
+      :name = "props.name"
+      :id = "props.id" type = "radio"
+      :checked = "checked"
     />
     <label class = "radio__label" :for = "props.id"><slot></slot></label>
   </div>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 
 import axios from "axios";
-import {ref, onMounted} from "vue";
+import {ref, watch, watchEffect} from "vue";
 
 import RadioGroup from "./components/ui/RadioGroup.vue"
 import Button from "./components/ui/Button.vue";
@@ -11,25 +11,26 @@ import Container from "./components/shared/Container.vue";
 
 import {Download, Shuffle} from "lucide-vue-next";
 
+const API_URL = "https://60db5d8d801dcb00172910e7.mockapi.io";
+
 const tabs = ref([]);
 const elements = ref([]);
+const url = ref('');
 
-const url = ref(window.location.pathname.slice(1));
-onMounted(async() => {
+watchEffect(async () => {
   try{
-    const tabsResponse = await axios.get('https://60db5d8d801dcb00172910e7.mockapi.io/tabs');
+    url.value = window.location.pathname.slice(1);
+
+    const tabsResponse = await axios.get(`${API_URL}/tabs`);
     tabs.value = tabsResponse.data;
 
-    const elementsResponse = await axios.get(`https://60db5d8d801dcb00172910e7.mockapi.io/elements?type=${url.value}`);
+    const elementsResponse = await axios.get(`${API_URL}/elements?type=${url.value || tabs.value[0].type}`);
     elements.value = elementsResponse.data;
-    console.log(elements.value);
   }
   catch(error){
     console.error(`Ошибка с сетью: ${error}`);
   }
 })
-
-
 </script>
 
 <template>
@@ -57,6 +58,7 @@ onMounted(async() => {
           <Tabs
               class="generator__tabs"
               :items="tabs"
+              :url = "url"
           />
           <RadioGroup
               class="generator__radios"
