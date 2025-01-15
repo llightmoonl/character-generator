@@ -3,18 +3,24 @@
 import axios from "axios";
 import {ref, onMounted} from "vue";
 
+import RadioGroup from "./components/ui/RadioGroup.vue"
 import Button from "./components/ui/Button.vue";
 import Canvas from "./components/ui/Canvas.vue";
 import Tabs from "./components/shared/Tabs.vue";
 import Container from "./components/shared/Container.vue";
 
-import {Download, Shuffle} from "lucide-vue-next"
-let tabsData = ref('');
+import {Download, Shuffle} from "lucide-vue-next";
+
+const tabs = ref([]);
+const elements = ref([]);
 
 onMounted(async() => {
   try{
-    const response = await axios.get('https://60db5d8d801dcb00172910e7.mockapi.io/tabs');
-    tabsData.value = response.data;
+    const tabsResponse = await axios.get('https://60db5d8d801dcb00172910e7.mockapi.io/tabs');
+    tabs.value = tabsResponse.data;
+
+    const elementsResponse = await axios.get('https://60db5d8d801dcb00172910e7.mockapi.io/elements');
+    elements.value = elementsResponse.data;
   }
   catch(error){
     console.error(`Ошибка с сетью: ${error}`);
@@ -44,7 +50,8 @@ onMounted(async() => {
         </div>
         <div class="generator__right">
           <h2 class = "generator__subtitle">Customize Look</h2>
-          <Tabs class="generator__tabs" :items="tabsData"/>
+          <Tabs class="generator__tabs" :items="tabs"/>
+          <RadioGroup class="generator__radios"></RadioGroup>
         </div>
       </div>
     </Container>
@@ -76,6 +83,9 @@ onMounted(async() => {
       column-gap: 10px;
       align-items: center;
       justify-content: center;
+    }
+    &__radios{
+      margin-top: 40px;
     }
   }
   .button{

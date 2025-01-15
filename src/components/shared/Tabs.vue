@@ -2,7 +2,7 @@
 import {ref} from "vue";
 import TabTrigger from "../ui/TabTrigger.vue";
 
-defineProps<{
+const props = defineProps<{
   items: Array
 }>();
 
@@ -11,7 +11,6 @@ const id = ref(1);
 const handleTab = (item) => {
   id.value = item.id;
 }
-
 </script>
 
 <template>
@@ -20,7 +19,7 @@ const handleTab = (item) => {
         v-for="item in items"
         :key="item.id"
     >
-      <TabTrigger @click-tab="handleTab(item)" :active = "id === item.id">{{item.text}}</TabTrigger>
+      <TabTrigger @click-tab="handleTab(item)" :active = "id === item.id">{{item.type}}</TabTrigger>
     </li>
   </ul>
 </template>
