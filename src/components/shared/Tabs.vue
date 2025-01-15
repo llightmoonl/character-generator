@@ -9,6 +9,7 @@ const props = defineProps<{
 const id = ref(1);
 
 const handleTab = (item) => {
+  window.location.pathname = item.type;
   id.value = item.id;
 }
 </script>

@@ -14,12 +14,14 @@ import {Download, Shuffle} from "lucide-vue-next";
 const tabs = ref([]);
 const elements = ref([]);
 
+const urlTabs = ref('hair');
+
 onMounted(async() => {
   try{
     const tabsResponse = await axios.get('https://60db5d8d801dcb00172910e7.mockapi.io/tabs');
     tabs.value = tabsResponse.data;
 
-    const elementsResponse = await axios.get('https://60db5d8d801dcb00172910e7.mockapi.io/elements');
+    const elementsResponse = await axios.get(`https://60db5d8d801dcb00172910e7.mockapi.io/elements?type=${urlTabs.value}`);
     elements.value = elementsResponse.data;
   }
   catch(error){
