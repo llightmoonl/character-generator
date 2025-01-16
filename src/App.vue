@@ -17,30 +17,26 @@ const API_URL = "https://60db5d8d801dcb00172910e7.mockapi.io";
 const router = useRouter();
 
 const tabs = ref([]);
+const activeTab = ref({});
 const elements = ref([]);
-const url = ref('');
-
-const activeTab = ref(1);
 
 const handleTab = (item: object) => {
-  const typeItem = item.type.toLowerCase();
-
   activeTab.value = item;
-  router.replace({name: 'home', query: {type: typeItem}});
-  url.value = typeItem;
+  router.replace({name: 'home', query: {type: activeTab.value.type}});
 }
 
 onMounted(async () => {
   const tabsResponse = await axios.get(`${API_URL}/tabs`);
   tabs.value = tabsResponse.data;
+  activeTab.value = tabs.value[0];
 
-  const elementsResponse = await axios.get(`${API_URL}/elements?type=${url.value || tabs.value[0].type}`);
+  const elementsResponse = await axios.get(`${API_URL}/elements?type=${activeTab.value.type}`);
   elements.value = elementsResponse.data;
 })
 
-watch(url,async () => {
+watch(activeTab,async () => {
   try{
-    const elementsResponse = await axios.get(`${API_URL}/elements?type=${url.value || tabs.value[0].type}`);
+    const elementsResponse = await axios.get(`${API_URL}/elements?type=${activeTab.value.type}`);
     elements.value = elementsResponse.data;
   }
   catch(error){
@@ -75,6 +71,7 @@ watch(url,async () => {
               class="generator__tabs"
               :items="tabs"
               :activeTab="activeTab"
+              :handleTab="handleTab"
           />
           <RadioGroup
               class="generator__radios"

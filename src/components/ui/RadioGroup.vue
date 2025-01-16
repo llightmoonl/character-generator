@@ -13,7 +13,7 @@ const props = defineProps<{
       v-for = "item in props.items"
       :name = "item.type"
       :id = "item.id"
-      checked><img :alt = "item.alt" :src="item.url"/>
+  ><img :alt = "item.alt" :src="item.url"/>
   </RadioGroupItem>
 </form>
 </template>

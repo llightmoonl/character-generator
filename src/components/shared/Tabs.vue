@@ -1,13 +1,12 @@
 <script setup lang="ts">
-
-import {inject} from "vue";
 import TabTrigger from "../ui/TabTrigger.vue";
 
 const props = defineProps<{
-  items: Array<object>
+  items: Array<object>,
+  activeTab: object,
+  handleTab: Function,
 }>();
 
-const {activeTab, handleTab} = inject('tabs');
 </script>
 
 <template>
@@ -16,7 +15,7 @@ const {activeTab, handleTab} = inject('tabs');
         v-for="item in props.items"
         :key="item.id"
     >
-      <TabTrigger @click-tab="handleTab(item)" :active = "activeTab === item.id">{{item.type}}</TabTrigger>
+      <TabTrigger @click-tab="handleTab(item)" :active = "activeTab.id === item.id">{{item.type}}</TabTrigger>
     </li>
   </ul>
 </template>
