@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const props = defineProps<{
-  id: number,
+  id: string,
   name: string,
   checked?: boolean,
 }>()
@@ -21,15 +21,19 @@ const props = defineProps<{
 <style scoped lang="scss">
   .radio{
     position: relative;
+    user-select: none;
     &__input{
       display: none;
     }
     &__label{
-      font-size: 1.8rem;
+      display: flex;
+      min-width: 156px;
+      min-height: 156px;
+      place-content: center;
       .radio__input:checked ~ &::after{
         content: url('../../assets/icons/check.svg');
-        top: -29px;
-        right: 0;
+        top: -15px;
+        right: -3px;
         position: absolute;
         width: 24px;
         height: 24px;

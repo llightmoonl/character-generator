@@ -25,6 +25,7 @@ const props = defineProps<{
     padding: 14px 36px;
     border-radius: 12px;
     cursor: pointer;
+    user-select: none;
     &:hover{
       background-color: #144198;
     }

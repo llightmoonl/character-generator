@@ -12,35 +12,45 @@ import Canvas from "./components/ui/Canvas.vue";
 import Tabs from "./components/shared/Tabs.vue";
 import Container from "./components/shared/Container.vue";
 
-const API_URL = "https://60db5d8d801dcb00172910e7.mockapi.io";
-
 const router = useRouter();
 
 const tabs = ref([]);
 const activeTab = ref({});
 const elements = ref([]);
+const activeElement = ref({});
 
 const handleTab = (item: object) => {
   activeTab.value = item;
   router.replace({name: 'home', query: {type: activeTab.value.type}});
 }
 
-onMounted(async () => {
-  const tabsResponse = await axios.get(`${API_URL}/tabs`);
-  tabs.value = tabsResponse.data;
-  activeTab.value = tabs.value[0];
+const getElements = async() => {
+  try{
+    const elementsResponse = await
+      axios.get(`${import.meta.env.VITE_API_URL}/elements?type=${activeTab.value.type}`);
+    return elementsResponse.data;
+  }
+  catch (error){
+    throw error;
+  }
+}
 
-  const elementsResponse = await axios.get(`${API_URL}/elements?type=${activeTab.value.type}`);
-  elements.value = elementsResponse.data;
+onMounted(async () => {
+  const tabsResponse = await axios.get(`${import.meta.env.VITE_API_URL}/tabs`);
+  tabs.value = tabsResponse.data;
+
+  activeTab.value = tabs.value[0];
+  elements.value = await getElements();
+
+  activeElement.value = elements.value[0];
 })
 
 watch(activeTab,async () => {
   try{
-    const elementsResponse = await axios.get(`${API_URL}/elements?type=${activeTab.value.type}`);
-    elements.value = elementsResponse.data;
+    elements.value = await getElements();
   }
   catch(error){
-    console.error(`Ошибка с сетью: ${error}`);
+    console.error(`Ошибка сети: ${error}`);
   }
 })
 </script>
@@ -75,7 +85,8 @@ watch(activeTab,async () => {
           />
           <RadioGroup
               class="generator__radios"
-              :items="elements"
+              :elements="elements"
+              :activeElement="activeElement"
           />
         </div>
       </div>
@@ -88,6 +99,10 @@ watch(activeTab,async () => {
     height: 100vh;
     display: flex;
     align-items: center;
+    &__title,
+    &__subtitle{
+      user-select: none;
+    }
     &__content{
       margin-top: 56px;
       display: flex;

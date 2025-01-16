@@ -2,7 +2,8 @@
 import RadioGroupItem from "./RadioGroupItem.vue";
 
 const props = defineProps<{
-  items: Array<string>;
+  elements: Array<{id: number, type: string, url: string, alt: string}>,
+  activeElement: {id: number, type: string, url: string, alt: string}
 }>()
 
 </script>
@@ -10,10 +11,11 @@ const props = defineProps<{
 <template>
 <form class = "radio-group">
   <RadioGroupItem
-      v-for = "item in props.items"
-      :name = "item.type"
-      :id = "item.id"
-  ><img :alt = "item.alt" :src="item.url"/>
+      v-for = "element in props.elements"
+      :name = "element.type"
+      :id = "element.id"
+      :checked = "element.id === activeElement.id"
+  ><img :alt = "element.alt" :src="element.url"/>
   </RadioGroupItem>
 </form>
 </template>

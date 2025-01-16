@@ -2,8 +2,8 @@
 import TabTrigger from "../ui/TabTrigger.vue";
 
 const props = defineProps<{
-  items: Array<object>,
-  activeTab: object,
+  items: Array<{id: PropertyKey | undefined, type: String}>,
+  activeTab: {id: PropertyKey | undefined, type: String},
   handleTab: Function,
 }>();
 
