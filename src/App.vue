@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-import {ref, watch, onMounted, provide} from "vue";
+import {ref, watch, onMounted} from "vue";
 import {useRouter} from 'vue-router';
 import {Download, Shuffle} from "lucide-vue-next";
 
@@ -25,12 +25,10 @@ const activeTab = ref(1);
 const handleTab = (item: object) => {
   const typeItem = item.type.toLowerCase();
 
-  activeTab.value = item.id;
+  activeTab.value = item;
   router.replace({name: 'home', query: {type: typeItem}});
   url.value = typeItem;
 }
-
-provide('tabs', {activeTab, handleTab});
 
 onMounted(async () => {
   const tabsResponse = await axios.get(`${API_URL}/tabs`);
@@ -76,6 +74,7 @@ watch(url,async () => {
           <Tabs
               class="generator__tabs"
               :items="tabs"
+              :activeTab="activeTab"
           />
           <RadioGroup
               class="generator__radios"
