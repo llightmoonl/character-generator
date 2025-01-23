@@ -9,7 +9,8 @@
 
 <style scoped>
   .container{
-    max-width: 1190px;
+    max-width: 1440px;
+    padding: 0 36px;
     margin: 0 auto;
   }
 </style>

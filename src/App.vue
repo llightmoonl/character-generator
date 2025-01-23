@@ -105,10 +105,9 @@ watch(activeTab,async () => {
     }
     &__content{
       margin-top: 56px;
-      display: flex;
-    }
-    &__right{
-      margin-left: 80px;
+      display: grid;
+      grid-template-columns: 512px 1fr;
+      column-gap: 80px;
     }
     &__tabs{
       margin-top: 24px;
