@@ -1,226 +1,286 @@
 {
-  "hair": [
+  "elements": [
     {
       "id": 1,
-      "name": "hair-1",
-      "url": "/src/assets/hair/hair-1.svg"
+      "type": "hair",
+      "url": "/src/assets/hair/hair-1.svg",
+      "alt": "hair-1"
     },
     {
       "id": 2,
-      "name": "hair-2",
-      "url": "/src/assets/hair/hair-2.svg"
+      "type": "hair",
+      "url": "/src/assets/hair/hair-2.svg",
+      "alt": "hair-2"
     },
     {
       "id": 3,
-      "name": "hair-3",
-      "url": "/src/assets/hair/hair-3.svg"
+      "type": "hair",
+      "url": "/src/assets/hair/hair-3.svg",
+      "alt": "hair-3"
     },
     {
       "id": 4,
-      "name": "hair-4",
-      "url": "/src/assets/hair/hair-4.svg"
+      "type": "hair",
+      "url": "/src/assets/hair/hair-4.svg",
+      "alt": "hair-4"
     },
     {
       "id": 5,
-      "name": "hair-5",
-      "url": "/src/assets/hair/hair-5.svg"
+      "type": "hair",
+      "url": "/src/assets/hair/hair-5.svg",
+      "alt": "hair-5"
     },
     {
       "id": 6,
-      "name": "hair-6",
-      "url": "/src/assets/hair/hair-6.svg"
+      "type": "hair",
+      "url": "/src/assets/hair/hair-6.svg",
+      "alt": "hair-6"
+    },
+    {
+      "id": 7,
+      "type": "eyes",
+      "url": "/src/assets/eyes/eyes-1.svg",
+      "alt": "eyes-1"
+    },
+    {
+      "id": 8,
+      "type": "eyes",
+      "url": "/src/assets/eyes/eyes-2.svg",
+      "alt": "eyes-2"
+    },
+    {
+      "id": 9,
+      "type": "eyes",
+      "url": "/src/assets/eyes/eyes-3.svg",
+      "alt": "eyes-3"
+    },
+    {
+      "id": 10,
+      "type": "eyes",
+      "url": "/src/assets/eyes/eyes-4.svg",
+      "alt": "eyes-4"
+    },
+    {
+      "id": 11,
+      "type": "eyes",
+      "url": "/src/assets/eyes/eyes-5.svg",
+      "alt": "eyes-5"
+    },
+    {
+      "id": 12,
+      "type": "eyes",
+      "url": "/src/assets/eyes/eyes-6.svg",
+      "alt": "eyes-6"
+    },
+    {
+      "id": 13,
+      "type": "ears",
+      "url": "/src/assets/ears/ears-1.svg",
+      "alt": "ears-1"
+    },
+    {
+      "id": 14,
+      "type": "ears",
+      "url": "/src/assets/ears/ears-2.svg",
+      "alt": "ears-2"
+    },
+    {
+      "id": 15,
+      "type": "ears",
+      "url": "/src/assets/ears/ears-3.svg",
+      "alt": "ears-3"
+    },
+    {
+      "id": 16,
+      "type": "ears",
+      "url": "/src/assets/ears/ears-4.svg",
+      "alt": "ears-4"
+    },
+    {
+      "id": 17,
+      "type": "ears",
+      "url": "/src/assets/ears/ears-5.svg",
+      "alt": "ears-5"
+    },
+    {
+      "id": 18,
+      "type": "ears",
+      "url": "/src/assets/ears/ears-6.svg",
+      "alt": "ears-6"
+    },
+    {
+      "id": 19,
+      "type": "nose",
+      "url": "/src/assets/nose/nose-1.svg",
+      "alt": "nose-1"
+    },
+    {
+      "id": 20,
+      "type": "nose",
+      "url": "/src/assets/nose/nose-2.svg",
+      "alt": "nose-2"
+    },
+    {
+      "id": 21,
+      "type": "nose",
+      "url": "/src/assets/nose/nose-3.svg",
+      "alt": "nose-3"
+    },
+    {
+      "id": 22,
+      "type": "nose",
+      "url": "/src/assets/nose/nose-4.svg",
+      "alt": "nose-4"
+    },
+    {
+      "id": 23,
+      "type": "nose",
+      "url": "/src/assets/nose/nose-5.svg",
+      "alt": "nose-5"
+    },
+    {
+      "id": 24,
+      "type": "nose",
+      "url": "/src/assets/nose/nose-6.svg",
+      "alt": "nose-6"
+    },
+    {
+      "id": 25,
+      "type": "mouth",
+      "url": "/src/assets/mouth/mouth-1.svg",
+      "alt": "mouth-1"
+    },
+    {
+      "id": 26,
+      "type": "mouth",
+      "url": "/src/assets/mouth/mouth-2.svg",
+      "alt": "mouth-2"
+    },
+    {
+      "id": 27,
+      "type": "mouth",
+      "url": "/src/assets/mouth/mouth-3.svg",
+      "alt": "mouth-3"
+    },
+    {
+      "id": 28,
+      "type": "mouth",
+      "url": "/src/assets/mouth/mouth-4.svg",
+      "alt": "mouth-4"
+    },
+    {
+      "id": 29,
+      "type": "mouth",
+      "url": "/src/assets/mouth/mouth-5.svg",
+      "alt": "mouth-5"
+    },
+    {
+      "id": 30,
+      "type": "mouth",
+      "url": "/src/assets/mouth/mouth-6.svg",
+      "alt": "mouth-6"
+    },
+    {
+      "id": 31,
+      "type": "background",
+      "url": "/src/assets/background/background-1.svg",
+      "alt": "background-1"
+    },
+    {
+      "id": 32,
+      "type": "background",
+      "url": "/src/assets/background/background-2.svg",
+      "alt": "background-2"
+    },
+    {
+      "id": 33,
+      "type": "background",
+      "url": "/src/assets/background/background-3.svg",
+      "alt": "background-3"
+    },
+    {
+      "id": 34,
+      "type": "background",
+      "url": "/src/assets/background/background-4.svg",
+      "alt": "background-4"
+    },
+    {
+      "id": 35,
+      "type": "background",
+      "url": "/src/assets/background/background-5.svg",
+      "alt": "background-5"
+    },
+    {
+      "id": 36,
+      "type": "background",
+      "url": "/src/assets/background/background-6.svg",
+      "alt": "background-6"
+    },
+    {
+      "id": 37,
+      "type": "accessories",
+      "url": "/src/assets/accessories/accessories-1.svg",
+      "alt": "accessories-1"
+    },
+    {
+      "id": 38,
+      "type": "accessories",
+      "url": "/src/assets/accessories/accessories-2.svg",
+      "alt": "accessories-2"
+    },
+    {
+      "id": 39,
+      "type": "accessories",
+      "url": "/src/assets/accessories/accessories-3.svg",
+      "alt": "accessories-3"
+    },
+    {
+      "id": 40,
+      "type": "accessories",
+      "url": "/src/assets/accessories/accessories-4.svg",
+      "alt": "accessories-4"
+    },
+    {
+      "id": 41,
+      "type": "accessories",
+      "url": "/src/assets/accessories/accessories-5.svg",
+      "alt": "accessories-5"
+    },
+    {
+      "id": 42,
+      "type": "accessories",
+      "url": "/src/assets/accessories/accessories-6.svg",
+      "alt": "accessories-6"
     }
   ],
-  "eyes": [
+  "tabs": [
     {
       "id": 1,
-      "name": "eyes-1",
-      "url": "/src/assets/eyes/eyes-1.svg"
+      "type": "hair"
     },
     {
       "id": 2,
-      "name": "eyes-2",
-      "url": "/src/assets/eyes/eyes-2.svg"
+      "type": "eyes"
     },
     {
       "id": 3,
-      "name": "eyes-3",
-      "url": "/src/assets/eyes/eyes-3.svg"
+      "type": "ears"
     },
     {
       "id": 4,
-      "name": "eyes-4",
-      "url": "/src/assets/eyes/eyes-4.svg"
+      "type": "nose"
     },
     {
       "id": 5,
-      "name": "eyes-5",
-      "url": "/src/assets/eyes/eyes-5.svg"
+      "type": "mouth"
     },
     {
       "id": 6,
-      "name": "eyes-6",
-      "url": "/src/assets/eyes/eyes-6.svg"
-    }
-  ],
-  "ears": [
-    {
-      "id": 1,
-      "name": "ears-1",
-      "url": "/src/assets/ears/ears-1.svg"
+      "type": "background"
     },
     {
-      "id": 2,
-      "name": "ears-2",
-      "url": "/src/assets/ears/ears-2.svg"
-    },
-    {
-      "id": 3,
-      "name": "ears-3",
-      "url": "/src/assets/ears/ears-3.svg"
-    },
-    {
-      "id": 4,
-      "name": "ears-4",
-      "url": "/src/assets/ears/ears-4.svg"
-    },
-    {
-      "id": 5,
-      "name": "ears-5",
-      "url": "/src/assets/ears/ears-5.svg"
-    },
-    {
-      "id": 6,
-      "name": "ears-6",
-      "url": "/src/assets/ears/ears-6.svg"
-    }
-  ],
-  "nose": [
-    {
-      "id": 1,
-      "name": "nose-1",
-      "url": "/src/assets/nose/nose-1.svg"
-    },
-    {
-      "id": 2,
-      "name": "nose-2",
-      "url": "/src/assets/nose/nose-2.svg"
-    },
-    {
-      "id": 3,
-      "name": "nose-3",
-      "url": "/src/assets/nose/nose-3.svg"
-    },
-    {
-      "id": 4,
-      "name": "nose-4",
-      "url": "/src/assets/nose/nose-4.svg"
-    },
-    {
-      "id": 5,
-      "name": "nose-5",
-      "url": "/src/assets/nose/nose-5.svg"
-    },
-    {
-      "id": 6,
-      "name": "nose-6",
-      "url": "/src/assets/nose/nose-6.svg"
-    }
-  ],
-  "mouth": [
-    {
-      "id": 1,
-      "name": "mouth-1",
-      "url": "/src/assets/mouth/mouth-1.svg"
-    },
-    {
-      "id": 2,
-      "name": "mouth-2",
-      "url": "/src/assets/mouth/mouth-2.svg"
-    },
-    {
-      "id": 3,
-      "name": "mouth-3",
-      "url": "/src/assets/mouth/mouth-3.svg"
-    },
-    {
-      "id": 4,
-      "name": "mouth-4",
-      "url": "/src/assets/mouth/mouth-4.svg"
-    },
-    {
-      "id": 5,
-      "name": "mouth-5",
-      "url": "/src/assets/mouth/mouth-5.svg"
-    },
-    {
-      "id": 6,
-      "name": "mouth-6",
-      "url": "/src/assets/mouth/mouth-6.svg"
-    }
-  ],
-  "background": [
-    {
-      "id": 1,
-      "name": "background-1",
-      "url": "/src/assets/background/background-1.svg"
-    },
-    {
-      "id": 2,
-      "name": "background-2",
-      "url": "/src/assets/background/background-2.svg"
-    },
-    {
-      "id": 3,
-      "name": "background-3",
-      "url": "/src/assets/background/background-3.svg"
-    },
-    {
-      "id": 4,
-      "name": "background-4",
-      "url": "/src/assets/background/background-4.svg"
-    },
-    {
-      "id": 5,
-      "name": "background-5",
-      "url": "/src/assets/background/background-5.svg"
-    },
-    {
-      "id": 6,
-      "name": "background-6",
-      "url": "/src/assets/background/background-6.svg"
-    }
-  ],
-  "accessories": [
-    {
-      "id": 1,
-      "name": "accessories-1",
-      "url": "/src/assets/accessories/accessories-1.svg"
-    },
-    {
-      "id": 2,
-      "name": "accessories-2",
-      "url": "/src/assets/accessories/accessories-2.svg"
-    },
-    {
-      "id": 3,
-      "name": "accessories-3",
-      "url": "/src/assets/accessories/accessories-3.svg"
-    },
-    {
-      "id": 4,
-      "name": "accessories-4",
-      "url": "/src/assets/accessories/accessories-4.svg"
-    },
-    {
-      "id": 5,
-      "name": "accessories-5",
-      "url": "/src/assets/accessories/accessories-5.svg"
-    },
-    {
-      "id": 6,
-      "name": "accessories-6",
-      "url": "/src/assets/accessories/accessories-6.svg"
+      "id": 7,
+      "type": "accessories"
     }
   ]
 }

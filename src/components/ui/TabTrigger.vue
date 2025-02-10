@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-const props = defineProps<{
+defineProps<{
   active?: boolean,
 }>();
 
@@ -30,6 +30,10 @@ const emits = defineEmits<{
     font-size: 1.6rem;
     font-weight: 700;
     cursor: pointer;
+
+    &:first-letter {
+      text-transform: uppercase;
+    }
 
     &:hover{
       background-color: #C6D3EC;

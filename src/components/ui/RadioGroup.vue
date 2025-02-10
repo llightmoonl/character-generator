@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import RadioGroupItem from "./RadioGroupItem.vue";
+import {RadioGroupItem} from "@components/ui";
 
 const props = defineProps<{
   elements: Array<{ id: number, type: string, url: string, alt: string }>,

@@ -4,13 +4,12 @@ import {ref, watch, onMounted} from "vue";
 import {useRouter} from 'vue-router';
 import {Download, Shuffle} from "lucide-vue-next";
 
-import axios from "axios";
+import {Button, RadioGroup, Canvas} from "@components/ui"
+import {Tabs, Container} from "@components/shared";
 
-import RadioGroup from "./components/ui/RadioGroup.vue"
-import Button from "./components/ui/Button.vue";
-import Canvas from "./components/ui/Canvas.vue";
-import Tabs from "./components/shared/Tabs.vue";
-import Container from "./components/shared/Container.vue";
+import {getTabs} from '@/services/tabs';
+import {getElementsByType} from '@/services/elements';
+
 
 const router = useRouter();
 
@@ -25,29 +24,22 @@ const handleTab = (item: object) => {
   router.replace({name: 'home', query: {type: activeTab.value.type}});
 }
 
-const getElements = async () => {
-  try {
-    const elementsResponse = await
-      axios.get(`${import.meta.env.VITE_API_URL}/elements?type=${activeTab.value.type}`);
-    return elementsResponse.data;
-  } catch (error) {
-    throw error;
-  }
-}
-
 onMounted(async () => {
-  const tabsResponse = await axios.get(`${import.meta.env.VITE_API_URL}/tabs`);
-  tabs.value = tabsResponse.data;
+  try {
+    tabs.value = await getTabs();
+    activeTab.value = tabs.value[0];
 
-  activeTab.value = tabs.value[0];
-  elements.value = await getElements();
+    elements.value = await getElementsByType(activeTab.value.type);
+    activeElement.value = elements.value[0];
 
-  activeElement.value = elements.value[0];
+  } catch (error) {
+    console.error(`Ошибка сети: ${error}`);
+  }
 })
 
 watch(activeTab, async () => {
   try {
-    elements.value = await getElements();
+    elements.value = await getElementsByType(activeTab.value.type);
   } catch (error) {
     console.error(`Ошибка сети: ${error}`);
   }
