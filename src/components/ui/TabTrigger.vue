@@ -30,6 +30,7 @@ const emits = defineEmits<{
     font-size: 1.6rem;
     font-weight: 700;
     cursor: pointer;
+
     &:hover{
       background-color: #C6D3EC;
     }

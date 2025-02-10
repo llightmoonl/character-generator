@@ -1,0 +1,226 @@
+{
+  "hair": [
+    {
+      "id": 1,
+      "name": "hair-1",
+      "url": "/src/assets/hair/hair-1.svg"
+    },
+    {
+      "id": 2,
+      "name": "hair-2",
+      "url": "/src/assets/hair/hair-2.svg"
+    },
+    {
+      "id": 3,
+      "name": "hair-3",
+      "url": "/src/assets/hair/hair-3.svg"
+    },
+    {
+      "id": 4,
+      "name": "hair-4",
+      "url": "/src/assets/hair/hair-4.svg"
+    },
+    {
+      "id": 5,
+      "name": "hair-5",
+      "url": "/src/assets/hair/hair-5.svg"
+    },
+    {
+      "id": 6,
+      "name": "hair-6",
+      "url": "/src/assets/hair/hair-6.svg"
+    }
+  ],
+  "eyes": [
+    {
+      "id": 1,
+      "name": "eyes-1",
+      "url": "/src/assets/eyes/eyes-1.svg"
+    },
+    {
+      "id": 2,
+      "name": "eyes-2",
+      "url": "/src/assets/eyes/eyes-2.svg"
+    },
+    {
+      "id": 3,
+      "name": "eyes-3",
+      "url": "/src/assets/eyes/eyes-3.svg"
+    },
+    {
+      "id": 4,
+      "name": "eyes-4",
+      "url": "/src/assets/eyes/eyes-4.svg"
+    },
+    {
+      "id": 5,
+      "name": "eyes-5",
+      "url": "/src/assets/eyes/eyes-5.svg"
+    },
+    {
+      "id": 6,
+      "name": "eyes-6",
+      "url": "/src/assets/eyes/eyes-6.svg"
+    }
+  ],
+  "ears": [
+    {
+      "id": 1,
+      "name": "ears-1",
+      "url": "/src/assets/ears/ears-1.svg"
+    },
+    {
+      "id": 2,
+      "name": "ears-2",
+      "url": "/src/assets/ears/ears-2.svg"
+    },
+    {
+      "id": 3,
+      "name": "ears-3",
+      "url": "/src/assets/ears/ears-3.svg"
+    },
+    {
+      "id": 4,
+      "name": "ears-4",
+      "url": "/src/assets/ears/ears-4.svg"
+    },
+    {
+      "id": 5,
+      "name": "ears-5",
+      "url": "/src/assets/ears/ears-5.svg"
+    },
+    {
+      "id": 6,
+      "name": "ears-6",
+      "url": "/src/assets/ears/ears-6.svg"
+    }
+  ],
+  "nose": [
+    {
+      "id": 1,
+      "name": "nose-1",
+      "url": "/src/assets/nose/nose-1.svg"
+    },
+    {
+      "id": 2,
+      "name": "nose-2",
+      "url": "/src/assets/nose/nose-2.svg"
+    },
+    {
+      "id": 3,
+      "name": "nose-3",
+      "url": "/src/assets/nose/nose-3.svg"
+    },
+    {
+      "id": 4,
+      "name": "nose-4",
+      "url": "/src/assets/nose/nose-4.svg"
+    },
+    {
+      "id": 5,
+      "name": "nose-5",
+      "url": "/src/assets/nose/nose-5.svg"
+    },
+    {
+      "id": 6,
+      "name": "nose-6",
+      "url": "/src/assets/nose/nose-6.svg"
+    }
+  ],
+  "mouth": [
+    {
+      "id": 1,
+      "name": "mouth-1",
+      "url": "/src/assets/mouth/mouth-1.svg"
+    },
+    {
+      "id": 2,
+      "name": "mouth-2",
+      "url": "/src/assets/mouth/mouth-2.svg"
+    },
+    {
+      "id": 3,
+      "name": "mouth-3",
+      "url": "/src/assets/mouth/mouth-3.svg"
+    },
+    {
+      "id": 4,
+      "name": "mouth-4",
+      "url": "/src/assets/mouth/mouth-4.svg"
+    },
+    {
+      "id": 5,
+      "name": "mouth-5",
+      "url": "/src/assets/mouth/mouth-5.svg"
+    },
+    {
+      "id": 6,
+      "name": "mouth-6",
+      "url": "/src/assets/mouth/mouth-6.svg"
+    }
+  ],
+  "background": [
+    {
+      "id": 1,
+      "name": "background-1",
+      "url": "/src/assets/background/background-1.svg"
+    },
+    {
+      "id": 2,
+      "name": "background-2",
+      "url": "/src/assets/background/background-2.svg"
+    },
+    {
+      "id": 3,
+      "name": "background-3",
+      "url": "/src/assets/background/background-3.svg"
+    },
+    {
+      "id": 4,
+      "name": "background-4",
+      "url": "/src/assets/background/background-4.svg"
+    },
+    {
+      "id": 5,
+      "name": "background-5",
+      "url": "/src/assets/background/background-5.svg"
+    },
+    {
+      "id": 6,
+      "name": "background-6",
+      "url": "/src/assets/background/background-6.svg"
+    }
+  ],
+  "accessories": [
+    {
+      "id": 1,
+      "name": "accessories-1",
+      "url": "/src/assets/accessories/accessories-1.svg"
+    },
+    {
+      "id": 2,
+      "name": "accessories-2",
+      "url": "/src/assets/accessories/accessories-2.svg"
+    },
+    {
+      "id": 3,
+      "name": "accessories-3",
+      "url": "/src/assets/accessories/accessories-3.svg"
+    },
+    {
+      "id": 4,
+      "name": "accessories-4",
+      "url": "/src/assets/accessories/accessories-4.svg"
+    },
+    {
+      "id": 5,
+      "name": "accessories-5",
+      "url": "/src/assets/accessories/accessories-5.svg"
+    },
+    {
+      "id": 6,
+      "name": "accessories-6",
+      "url": "/src/assets/accessories/accessories-6.svg"
+    }
+  ]
+}

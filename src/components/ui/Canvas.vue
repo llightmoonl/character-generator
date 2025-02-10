@@ -7,9 +7,9 @@ const props = defineProps<{
 </script>
 
 <template>
-<canvas class = "canvas" :width="width" :height="height" >
+  <canvas class="canvas" :width="width" :height="height">
 
-</canvas>
+  </canvas>
 </template>
 
 <style scoped lang="scss">
